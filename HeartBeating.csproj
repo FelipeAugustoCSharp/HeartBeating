@@ -99,5 +99,8 @@
   <ItemGroup>
     <None Include="Resources\return.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Fonts\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
