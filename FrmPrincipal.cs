@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -134,6 +135,12 @@ namespace HeartBeating
         {
             InitializeComponent();
             MudasPagina(5);
+        }
+
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            PictureCircle.Visible = true;
+            PictureCircle.Visible = false;            
         }
     }
 }

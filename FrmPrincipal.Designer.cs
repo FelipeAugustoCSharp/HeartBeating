@@ -64,7 +64,7 @@
             this.label39 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnConfirmar = new Guna.UI2.WinForms.Guna2Button();
             this.label35 = new System.Windows.Forms.Label();
             this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label38 = new System.Windows.Forms.Label();
@@ -131,6 +131,9 @@
             this.label37 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pnlContainer = new System.Windows.Forms.Panel();
+            this.PictureCircle = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.txtCircle1 = new System.Windows.Forms.Label();
+            this.txtCircle2 = new System.Windows.Forms.Label();
             this.tbcPrincipal.SuspendLayout();
             this.TbcHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -159,6 +162,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.voltar3)).BeginInit();
             this.pnlHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureCircle)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcPrincipal
@@ -534,6 +538,9 @@
             // 
             // TbcCadastroReceber
             // 
+            this.TbcCadastroReceber.Controls.Add(this.txtCircle2);
+            this.TbcCadastroReceber.Controls.Add(this.txtCircle1);
+            this.TbcCadastroReceber.Controls.Add(this.PictureCircle);
             this.TbcCadastroReceber.Controls.Add(this.guna2DateTimePicker1);
             this.TbcCadastroReceber.Controls.Add(this.guna2ComboBox4);
             this.TbcCadastroReceber.Controls.Add(this.label36);
@@ -541,7 +548,7 @@
             this.TbcCadastroReceber.Controls.Add(this.label39);
             this.TbcCadastroReceber.Controls.Add(this.label33);
             this.TbcCadastroReceber.Controls.Add(this.label34);
-            this.TbcCadastroReceber.Controls.Add(this.guna2Button3);
+            this.TbcCadastroReceber.Controls.Add(this.btnConfirmar);
             this.TbcCadastroReceber.Controls.Add(this.label35);
             this.TbcCadastroReceber.Controls.Add(this.guna2ComboBox2);
             this.TbcCadastroReceber.Controls.Add(this.label38);
@@ -622,7 +629,7 @@
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.ForeColor = System.Drawing.Color.Red;
-            this.label33.Location = new System.Drawing.Point(475, 3);
+            this.label33.Location = new System.Drawing.Point(677, 10);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(90, 41);
             this.label33.TabIndex = 101;
@@ -634,28 +641,29 @@
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Century Gothic", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.SpringGreen;
-            this.label34.Location = new System.Drawing.Point(441, 3);
+            this.label34.Location = new System.Drawing.Point(641, 10);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(163, 41);
             this.label34.TabIndex = 100;
             this.label34.Text = "Sucesso!";
             this.label34.Visible = false;
             // 
-            // guna2Button3
+            // btnConfirmar
             // 
-            this.guna2Button3.BorderRadius = 20;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.DeepSkyBlue;
-            this.guna2Button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(612, 348);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button3.TabIndex = 99;
-            this.guna2Button3.Text = "Enviar";
+            this.btnConfirmar.BorderRadius = 20;
+            this.btnConfirmar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirmar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirmar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnConfirmar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnConfirmar.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnConfirmar.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirmar.ForeColor = System.Drawing.Color.White;
+            this.btnConfirmar.Location = new System.Drawing.Point(612, 348);
+            this.btnConfirmar.Name = "btnConfirmar";
+            this.btnConfirmar.Size = new System.Drawing.Size(180, 45);
+            this.btnConfirmar.TabIndex = 99;
+            this.btnConfirmar.Text = "Enviar";
+            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
             // 
             // label35
             // 
@@ -1440,8 +1448,8 @@
             this.pnlHome.Controls.Add(this.label37);
             this.pnlHome.Controls.Add(this.pictureBox7);
             this.pnlHome.Controls.Add(this.pnlContainer);
-            this.pnlHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHome.Location = new System.Drawing.Point(0, 0);
+            this.pnlHome.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlHome.Location = new System.Drawing.Point(0, 396);
             this.pnlHome.Name = "pnlHome";
             this.pnlHome.Size = new System.Drawing.Size(800, 54);
             this.pnlHome.TabIndex = 27;
@@ -1575,6 +1583,44 @@
             this.pnlContainer.Size = new System.Drawing.Size(789, 445);
             this.pnlContainer.TabIndex = 1;
             // 
+            // PictureCircle
+            // 
+            this.PictureCircle.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.PictureCircle.ImageRotate = 0F;
+            this.PictureCircle.Location = new System.Drawing.Point(370, 45);
+            this.PictureCircle.Name = "PictureCircle";
+            this.PictureCircle.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.PictureCircle.Size = new System.Drawing.Size(281, 281);
+            this.PictureCircle.TabIndex = 108;
+            this.PictureCircle.TabStop = false;
+            this.PictureCircle.Visible = false;
+            // 
+            // txtCircle1
+            // 
+            this.txtCircle1.AutoSize = true;
+            this.txtCircle1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.txtCircle1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCircle1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtCircle1.Location = new System.Drawing.Point(383, 137);
+            this.txtCircle1.Name = "txtCircle1";
+            this.txtCircle1.Size = new System.Drawing.Size(260, 23);
+            this.txtCircle1.TabIndex = 109;
+            this.txtCircle1.Text = "Você será informado assim";
+            this.txtCircle1.Visible = false;
+            // 
+            // txtCircle2
+            // 
+            this.txtCircle2.AutoSize = true;
+            this.txtCircle2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.txtCircle2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCircle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtCircle2.Location = new System.Drawing.Point(389, 170);
+            this.txtCircle2.Name = "txtCircle2";
+            this.txtCircle2.Size = new System.Drawing.Size(244, 23);
+            this.txtCircle2.TabIndex = 110;
+            this.txtCircle2.Text = " que o item estiver pronto";
+            this.txtCircle2.Visible = false;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1622,6 +1668,7 @@
             this.pnlHome.ResumeLayout(false);
             this.pnlHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureCircle)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1712,7 +1759,7 @@
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button btnConfirmar;
         private System.Windows.Forms.Label label35;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
         private System.Windows.Forms.Label label38;
@@ -1730,6 +1777,9 @@
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel pnlContainer;
+        private System.Windows.Forms.Label txtCircle2;
+        private System.Windows.Forms.Label txtCircle1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox PictureCircle;
     }
 }
 
