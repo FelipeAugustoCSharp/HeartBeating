@@ -12,6 +12,8 @@ using System.Web.UI.WebControls;
 using LiteDB;
 using System.Security.Policy;
 using Newtonsoft.Json;
+using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace HeartBeating
 {
@@ -157,14 +159,15 @@ namespace HeartBeating
 
         public FrmPrincipal()
         {
-            InitializeComponent();
+            InitializeComponent();            
+            EnviarDados();
             MudasPagina(5);
         }
 
         private async void EnviarDados()
         {
             lboItens.Items.Clear();
-            var resultado = await cliente.Child("produto").OnceAsJsonAsync();
+            var resultado = await cliente.Child("produtos").OnceAsJsonAsync();
             JsonDocument importandoMinhaBase = JsonDocument.Parse(resultado);
             JsonElement filho = importandoMinhaBase.RootElement;
 
@@ -172,19 +175,20 @@ namespace HeartBeating
 
             foreach (var item in filho.EnumerateObject())
             {
+
                 JsonElement produtoFirebase = item.Value;
                  string nome = produtoFirebase.GetProperty("Nome").GetString();
                  string tipo = produtoFirebase.GetProperty("Tipo").GetString();
                  string local = produtoFirebase.GetProperty("LocalEntrega").GetString();
                  string date = produtoFirebase.GetProperty("Dia").GetString();
 
-                produtos Caridade = new produtos(nome, tipo, local, DateTime.Parse(date));
+                produtos Caridade = new produtos(nome, tipo, local, date);
                 lboItens.Items.Add(Caridade);
             }
         }
+        
 
-
-        private void btnLogin_Click_1(object sender, EventArgs e)
+            private void btnLogin_Click_1(object sender, EventArgs e)
         {
             if (btnLogin.Text == "Login")
                 MudasPagina(5);
@@ -337,12 +341,11 @@ namespace HeartBeating
             string nome = TxbNomeDoar.Text;
             string tipo = TxbTipoDoar.Text;
             string local = TxbLocalDoar.Text;
-            DateTime dia = DateTime.Parse(DataEntregaDoar.Text);
+            string dia = DataEntregaDoar.Text;
             produtos prod = new produtos(nome, tipo, local, dia);
             var json = JsonConvert.SerializeObject(prod);
             await cliente.Child("produtos").PostAsync(json);
-            EnviarDados();
-            
+            EnviarDados();            
         }
     }
     

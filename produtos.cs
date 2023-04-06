@@ -11,14 +11,14 @@ namespace HeartBeating
         private string _nomeProduto { get;set;}
         private string _tipoProduto { get;set;}
         private string _localEntrega { get;set;}
-        private DateTime _dia { get;set;}
+        private string _dia { get;set;}
 
         public override string ToString()
         {
             return _nomeProduto + " " + _tipoProduto;
         }
 
-        public produtos(string Nome, string Tipo, string Local, DateTime Dia)
+        public produtos(string Nome, string Tipo, string Local, string Dia)
         {
             this._nomeProduto = Nome;
             this._tipoProduto = Tipo;
