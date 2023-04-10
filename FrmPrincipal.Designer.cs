@@ -144,6 +144,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.ImageListProfile = new System.Windows.Forms.ImageList(this.components);
+            this.lboNames = new System.Windows.Forms.ListBox();
             this.tbcPrincipal.SuspendLayout();
             this.TbcHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -1520,6 +1521,7 @@
             // 
             // TbcProfile
             // 
+            this.TbcProfile.Controls.Add(this.lboNames);
             this.TbcProfile.Controls.Add(this.lboCodigo);
             this.TbcProfile.Controls.Add(this.LabelTypeUser);
             this.TbcProfile.Controls.Add(this.LabelNameUser);
@@ -1535,10 +1537,11 @@
             // lboCodigo
             // 
             this.lboCodigo.FormattingEnabled = true;
-            this.lboCodigo.Location = new System.Drawing.Point(349, 79);
+            this.lboCodigo.Location = new System.Drawing.Point(579, 79);
             this.lboCodigo.Name = "lboCodigo";
-            this.lboCodigo.Size = new System.Drawing.Size(442, 212);
+            this.lboCodigo.Size = new System.Drawing.Size(212, 212);
             this.lboCodigo.TabIndex = 4;
+            
             // 
             // LabelTypeUser
             // 
@@ -1740,6 +1743,14 @@
             this.ImageListProfile.TransparentColor = System.Drawing.Color.Transparent;
             this.ImageListProfile.Images.SetKeyName(0, "user4.png");
             // 
+            // lboNames
+            // 
+            this.lboNames.FormattingEnabled = true;
+            this.lboNames.Location = new System.Drawing.Point(328, 79);
+            this.lboNames.Name = "lboNames";
+            this.lboNames.Size = new System.Drawing.Size(212, 212);
+            this.lboNames.TabIndex = 5;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1911,6 +1922,7 @@
         private System.Windows.Forms.Label LabelErroSenha;
         private System.Windows.Forms.ImageList ImageListProfile;
         private System.Windows.Forms.ListBox lboCodigo;
+        private System.Windows.Forms.ListBox lboNames;
     }
 }
 

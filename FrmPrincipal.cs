@@ -37,6 +37,7 @@ namespace HeartBeating
                 while (dr.Read()) //enquanto estiver lendo os arquivos das linhas...
                 {
                     lboCodigo.Items.Add(dr[0].ToString()); // adicionar a primeira linha (codigo) como string dentro do list box                    
+                    lboNames.Items.Add(dr[1].ToString());
                 }
             }
             conn.Close(); //fechar o banco de dados
@@ -352,7 +353,7 @@ namespace HeartBeating
         {
             carregarLista();
             conn.Open();
-            comando.CommandText = "insert into Recebemos(tipo, empresa_id, nome, endereco, dia) values ('" + CBTipoDoar.Text + "', '" + lboCodigo.Items.Count + "','" + TxbNomeDoar.Text + "','" + CBLocalDoar.Text + "','" + DataEntregaDoar.Text + "')";
+            comando.CommandText = "insert into Recebemos(tipo, empresa_id, nome, endereco, dia) values ('" + CBTipoDoar.Text + "', '" + lboCodigo.Items[lboCodigo.Items.Count-1] + "','" + TxbNomeDoar.Text + "','" + CBLocalDoar.Text + "','" + DataEntregaDoar.Text + "')";
             comando.ExecuteNonQuery();
             conn.Close();
 
