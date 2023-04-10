@@ -44,7 +44,7 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.TbcDoar = new System.Windows.Forms.TabPage();
-            this.TxbLocalDoar = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CBLocalDoar = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.DataEntregaDoar = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label32 = new System.Windows.Forms.Label();
@@ -52,7 +52,7 @@
             this.btnEnviarDoacao = new Guna.UI2.WinForms.Guna2Button();
             this.label30 = new System.Windows.Forms.Label();
             this.TxbNomeDoar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.TxbTipoDoar = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CBTipoDoar = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
@@ -103,8 +103,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.TxbEmailUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.BtnRegistrar = new Guna.UI2.WinForms.Guna2Button();
-            this.TxbCNPJ = new Guna.UI2.WinForms.Guna2TextBox();
+            this.BtnRegistrarUser = new Guna.UI2.WinForms.Guna2Button();
+            this.TxbNomeUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.BtnCadastrarEmpresa = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -113,14 +113,14 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.voltar2 = new System.Windows.Forms.PictureBox();
             this.TbcRegistroEmpresa = new System.Windows.Forms.TabPage();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TxbConfirmarSenhaEmpresa = new Guna.UI2.WinForms.Guna2TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.guna2TextBox4 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TxbSenhaEmpresa = new Guna.UI2.WinForms.Guna2TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.guna2TextBox5 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TxbEmailEmpresa = new Guna.UI2.WinForms.Guna2TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.BtnRegistrarEmpresa = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox6 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.TxbCNPJEmpresa = new Guna.UI2.WinForms.Guna2TextBox();
             this.BtnEntrar = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -129,6 +129,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.voltar3 = new System.Windows.Forms.PictureBox();
             this.TbcProfile = new System.Windows.Forms.TabPage();
+            this.lboCodigo = new System.Windows.Forms.ListBox();
             this.LabelTypeUser = new System.Windows.Forms.Label();
             this.LabelNameUser = new System.Windows.Forms.Label();
             this.PictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
@@ -143,7 +144,6 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.ImageListProfile = new System.Windows.Forms.ImageList(this.components);
-            this.lboItens = new System.Windows.Forms.ListBox();
             this.tbcPrincipal.SuspendLayout();
             this.TbcHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -349,7 +349,7 @@
             // 
             // TbcDoar
             // 
-            this.TbcDoar.Controls.Add(this.TxbLocalDoar);
+            this.TbcDoar.Controls.Add(this.CBLocalDoar);
             this.TbcDoar.Controls.Add(this.label29);
             this.TbcDoar.Controls.Add(this.DataEntregaDoar);
             this.TbcDoar.Controls.Add(this.label32);
@@ -357,7 +357,7 @@
             this.TbcDoar.Controls.Add(this.btnEnviarDoacao);
             this.TbcDoar.Controls.Add(this.label30);
             this.TbcDoar.Controls.Add(this.TxbNomeDoar);
-            this.TbcDoar.Controls.Add(this.TxbTipoDoar);
+            this.TbcDoar.Controls.Add(this.CBTipoDoar);
             this.TbcDoar.Controls.Add(this.label28);
             this.TbcDoar.Controls.Add(this.label27);
             this.TbcDoar.Controls.Add(this.label23);
@@ -374,24 +374,24 @@
             this.TbcDoar.Text = "Doar";
             this.TbcDoar.UseVisualStyleBackColor = true;
             // 
-            // TxbLocalDoar
+            // CBLocalDoar
             // 
-            this.TxbLocalDoar.BackColor = System.Drawing.Color.Transparent;
-            this.TxbLocalDoar.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.TxbLocalDoar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TxbLocalDoar.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxbLocalDoar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxbLocalDoar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.TxbLocalDoar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.TxbLocalDoar.ItemHeight = 30;
-            this.TxbLocalDoar.Items.AddRange(new object[] {
+            this.CBLocalDoar.BackColor = System.Drawing.Color.Transparent;
+            this.CBLocalDoar.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CBLocalDoar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBLocalDoar.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CBLocalDoar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CBLocalDoar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CBLocalDoar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CBLocalDoar.ItemHeight = 30;
+            this.CBLocalDoar.Items.AddRange(new object[] {
             "Osasco - Rua Batiston, Numero 325 - CEP: 06357412",
             "Carapicuíba - Rua Antoneli, Numero 12 - CEP: 6554411",
             "Jundiaí - Rua Alfredo, Numero 272 - CEP: 8658416"});
-            this.TxbLocalDoar.Location = new System.Drawing.Point(295, 203);
-            this.TxbLocalDoar.Name = "TxbLocalDoar";
-            this.TxbLocalDoar.Size = new System.Drawing.Size(198, 36);
-            this.TxbLocalDoar.TabIndex = 107;
+            this.CBLocalDoar.Location = new System.Drawing.Point(295, 203);
+            this.CBLocalDoar.Name = "CBLocalDoar";
+            this.CBLocalDoar.Size = new System.Drawing.Size(198, 36);
+            this.CBLocalDoar.TabIndex = 107;
             // 
             // label29
             // 
@@ -489,25 +489,25 @@
             this.TxbNomeDoar.Size = new System.Drawing.Size(200, 36);
             this.TxbNomeDoar.TabIndex = 82;
             // 
-            // TxbTipoDoar
+            // CBTipoDoar
             // 
-            this.TxbTipoDoar.BackColor = System.Drawing.Color.Transparent;
-            this.TxbTipoDoar.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.TxbTipoDoar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.TxbTipoDoar.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxbTipoDoar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxbTipoDoar.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.TxbTipoDoar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.TxbTipoDoar.ItemHeight = 30;
-            this.TxbTipoDoar.Items.AddRange(new object[] {
+            this.CBTipoDoar.BackColor = System.Drawing.Color.Transparent;
+            this.CBTipoDoar.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CBTipoDoar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBTipoDoar.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CBTipoDoar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CBTipoDoar.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CBTipoDoar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CBTipoDoar.ItemHeight = 30;
+            this.CBTipoDoar.Items.AddRange(new object[] {
             "Alimentos",
             "Brinquedos",
             "Produtos De Limpeza",
             "Higiene Pessoal"});
-            this.TxbTipoDoar.Location = new System.Drawing.Point(295, 104);
-            this.TxbTipoDoar.Name = "TxbTipoDoar";
-            this.TxbTipoDoar.Size = new System.Drawing.Size(198, 36);
-            this.TxbTipoDoar.TabIndex = 80;
+            this.CBTipoDoar.Location = new System.Drawing.Point(295, 104);
+            this.CBTipoDoar.Name = "CBTipoDoar";
+            this.CBTipoDoar.Size = new System.Drawing.Size(198, 36);
+            this.CBTipoDoar.TabIndex = 80;
             // 
             // label28
             // 
@@ -630,7 +630,7 @@
             this.txtCircle2.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.txtCircle2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCircle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtCircle2.Location = new System.Drawing.Point(389, 170);
+            this.txtCircle2.Location = new System.Drawing.Point(728, 235);
             this.txtCircle2.Name = "txtCircle2";
             this.txtCircle2.Size = new System.Drawing.Size(244, 23);
             this.txtCircle2.TabIndex = 110;
@@ -643,7 +643,7 @@
             this.txtCircle1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.txtCircle1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCircle1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtCircle1.Location = new System.Drawing.Point(383, 137);
+            this.txtCircle1.Location = new System.Drawing.Point(730, 160);
             this.txtCircle1.Name = "txtCircle1";
             this.txtCircle1.Size = new System.Drawing.Size(260, 23);
             this.txtCircle1.TabIndex = 109;
@@ -654,7 +654,7 @@
             // 
             this.PictureCircle.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.PictureCircle.ImageRotate = 0F;
-            this.PictureCircle.Location = new System.Drawing.Point(370, 45);
+            this.PictureCircle.Location = new System.Drawing.Point(709, 78);
             this.PictureCircle.Name = "PictureCircle";
             this.PictureCircle.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.PictureCircle.Size = new System.Drawing.Size(281, 281);
@@ -1052,8 +1052,8 @@
             this.TbcRegister.Controls.Add(this.label8);
             this.TbcRegister.Controls.Add(this.TxbEmailUser);
             this.TbcRegister.Controls.Add(this.label11);
-            this.TbcRegister.Controls.Add(this.BtnRegistrar);
-            this.TbcRegister.Controls.Add(this.TxbCNPJ);
+            this.TbcRegister.Controls.Add(this.BtnRegistrarUser);
+            this.TbcRegister.Controls.Add(this.TxbNomeUser);
             this.TbcRegister.Controls.Add(this.BtnCadastrarEmpresa);
             this.TbcRegister.Controls.Add(this.label6);
             this.TbcRegister.Controls.Add(this.label9);
@@ -1182,40 +1182,40 @@
             this.label11.TabIndex = 52;
             this.label11.Text = "Email";
             // 
-            // BtnRegistrar
+            // BtnRegistrarUser
             // 
-            this.BtnRegistrar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnRegistrar.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.BtnRegistrar.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.BtnRegistrar.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.BtnRegistrar.FillColor = System.Drawing.Color.DeepSkyBlue;
-            this.BtnRegistrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
-            this.BtnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.BtnRegistrar.Location = new System.Drawing.Point(433, 248);
-            this.BtnRegistrar.Name = "BtnRegistrar";
-            this.BtnRegistrar.Size = new System.Drawing.Size(177, 35);
-            this.BtnRegistrar.TabIndex = 51;
-            this.BtnRegistrar.Text = "Registrar";
-            this.BtnRegistrar.Click += new System.EventHandler(this.BtnRegistrar_Click);
+            this.BtnRegistrarUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnRegistrarUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.BtnRegistrarUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BtnRegistrarUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.BtnRegistrarUser.FillColor = System.Drawing.Color.DeepSkyBlue;
+            this.BtnRegistrarUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold);
+            this.BtnRegistrarUser.ForeColor = System.Drawing.Color.White;
+            this.BtnRegistrarUser.Location = new System.Drawing.Point(433, 248);
+            this.BtnRegistrarUser.Name = "BtnRegistrarUser";
+            this.BtnRegistrarUser.Size = new System.Drawing.Size(177, 35);
+            this.BtnRegistrarUser.TabIndex = 51;
+            this.BtnRegistrarUser.Text = "Registrar";
+            this.BtnRegistrarUser.Click += new System.EventHandler(this.BtnRegistrar_Click);
             // 
-            // TxbCNPJ
+            // TxbNomeUser
             // 
-            this.TxbCNPJ.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxbCNPJ.DefaultText = "CNPJ da Instituição";
-            this.TxbCNPJ.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxbCNPJ.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxbCNPJ.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxbCNPJ.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxbCNPJ.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxbCNPJ.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxbCNPJ.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxbCNPJ.Location = new System.Drawing.Point(302, 90);
-            this.TxbCNPJ.Name = "TxbCNPJ";
-            this.TxbCNPJ.PasswordChar = '\0';
-            this.TxbCNPJ.PlaceholderText = "";
-            this.TxbCNPJ.SelectedText = "";
-            this.TxbCNPJ.Size = new System.Drawing.Size(189, 36);
-            this.TxbCNPJ.TabIndex = 49;
+            this.TxbNomeUser.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxbNomeUser.DefaultText = "Insira seu nome completo";
+            this.TxbNomeUser.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxbNomeUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxbNomeUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxbNomeUser.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxbNomeUser.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxbNomeUser.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxbNomeUser.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxbNomeUser.Location = new System.Drawing.Point(302, 90);
+            this.TxbNomeUser.Name = "TxbNomeUser";
+            this.TxbNomeUser.PasswordChar = '\0';
+            this.TxbNomeUser.PlaceholderText = "";
+            this.TxbNomeUser.SelectedText = "";
+            this.TxbNomeUser.Size = new System.Drawing.Size(189, 36);
+            this.TxbNomeUser.TabIndex = 49;
             // 
             // BtnCadastrarEmpresa
             // 
@@ -1247,9 +1247,9 @@
             this.label9.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.label9.Location = new System.Drawing.Point(297, 62);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(74, 25);
+            this.label9.Size = new System.Drawing.Size(180, 25);
             this.label9.TabIndex = 45;
-            this.label9.Text = "Nome";
+            this.label9.Text = "Nome Completo";
             // 
             // label10
             // 
@@ -1295,14 +1295,14 @@
             // 
             // TbcRegistroEmpresa
             // 
-            this.TbcRegistroEmpresa.Controls.Add(this.guna2TextBox3);
+            this.TbcRegistroEmpresa.Controls.Add(this.TxbConfirmarSenhaEmpresa);
             this.TbcRegistroEmpresa.Controls.Add(this.label13);
-            this.TbcRegistroEmpresa.Controls.Add(this.guna2TextBox4);
+            this.TbcRegistroEmpresa.Controls.Add(this.TxbSenhaEmpresa);
             this.TbcRegistroEmpresa.Controls.Add(this.label14);
-            this.TbcRegistroEmpresa.Controls.Add(this.guna2TextBox5);
+            this.TbcRegistroEmpresa.Controls.Add(this.TxbEmailEmpresa);
             this.TbcRegistroEmpresa.Controls.Add(this.label15);
             this.TbcRegistroEmpresa.Controls.Add(this.BtnRegistrarEmpresa);
-            this.TbcRegistroEmpresa.Controls.Add(this.guna2TextBox6);
+            this.TbcRegistroEmpresa.Controls.Add(this.TxbCNPJEmpresa);
             this.TbcRegistroEmpresa.Controls.Add(this.BtnEntrar);
             this.TbcRegistroEmpresa.Controls.Add(this.label17);
             this.TbcRegistroEmpresa.Controls.Add(this.label18);
@@ -1317,24 +1317,24 @@
             this.TbcRegistroEmpresa.Text = "Empresa";
             this.TbcRegistroEmpresa.UseVisualStyleBackColor = true;
             // 
-            // guna2TextBox3
+            // TxbConfirmarSenhaEmpresa
             // 
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "Confirme Sua Senha";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(570, 164);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PasswordChar = '\0';
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(189, 36);
-            this.guna2TextBox3.TabIndex = 71;
+            this.TxbConfirmarSenhaEmpresa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxbConfirmarSenhaEmpresa.DefaultText = "Confirme Sua Senha";
+            this.TxbConfirmarSenhaEmpresa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxbConfirmarSenhaEmpresa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxbConfirmarSenhaEmpresa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxbConfirmarSenhaEmpresa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxbConfirmarSenhaEmpresa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxbConfirmarSenhaEmpresa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.TxbConfirmarSenhaEmpresa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxbConfirmarSenhaEmpresa.Location = new System.Drawing.Point(570, 164);
+            this.TxbConfirmarSenhaEmpresa.Name = "TxbConfirmarSenhaEmpresa";
+            this.TxbConfirmarSenhaEmpresa.PasswordChar = '\0';
+            this.TxbConfirmarSenhaEmpresa.PlaceholderText = "";
+            this.TxbConfirmarSenhaEmpresa.SelectedText = "";
+            this.TxbConfirmarSenhaEmpresa.Size = new System.Drawing.Size(189, 36);
+            this.TxbConfirmarSenhaEmpresa.TabIndex = 71;
             // 
             // label13
             // 
@@ -1347,24 +1347,24 @@
             this.label13.TabIndex = 70;
             this.label13.Text = "Confirme";
             // 
-            // guna2TextBox4
+            // TxbSenhaEmpresa
             // 
-            this.guna2TextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox4.DefaultText = "Insira Sua Senha";
-            this.guna2TextBox4.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox4.Location = new System.Drawing.Point(570, 90);
-            this.guna2TextBox4.Name = "guna2TextBox4";
-            this.guna2TextBox4.PasswordChar = '\0';
-            this.guna2TextBox4.PlaceholderText = "";
-            this.guna2TextBox4.SelectedText = "";
-            this.guna2TextBox4.Size = new System.Drawing.Size(189, 36);
-            this.guna2TextBox4.TabIndex = 69;
+            this.TxbSenhaEmpresa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxbSenhaEmpresa.DefaultText = "Insira Sua Senha";
+            this.TxbSenhaEmpresa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxbSenhaEmpresa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxbSenhaEmpresa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxbSenhaEmpresa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxbSenhaEmpresa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxbSenhaEmpresa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
+            this.TxbSenhaEmpresa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxbSenhaEmpresa.Location = new System.Drawing.Point(570, 90);
+            this.TxbSenhaEmpresa.Name = "TxbSenhaEmpresa";
+            this.TxbSenhaEmpresa.PasswordChar = '\0';
+            this.TxbSenhaEmpresa.PlaceholderText = "";
+            this.TxbSenhaEmpresa.SelectedText = "";
+            this.TxbSenhaEmpresa.Size = new System.Drawing.Size(189, 36);
+            this.TxbSenhaEmpresa.TabIndex = 69;
             // 
             // label14
             // 
@@ -1377,24 +1377,24 @@
             this.label14.TabIndex = 68;
             this.label14.Text = "Senha";
             // 
-            // guna2TextBox5
+            // TxbEmailEmpresa
             // 
-            this.guna2TextBox5.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox5.DefaultText = "Insira Seu Email";
-            this.guna2TextBox5.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox5.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox5.Location = new System.Drawing.Point(302, 164);
-            this.guna2TextBox5.Name = "guna2TextBox5";
-            this.guna2TextBox5.PasswordChar = '\0';
-            this.guna2TextBox5.PlaceholderText = "";
-            this.guna2TextBox5.SelectedText = "";
-            this.guna2TextBox5.Size = new System.Drawing.Size(189, 36);
-            this.guna2TextBox5.TabIndex = 67;
+            this.TxbEmailEmpresa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxbEmailEmpresa.DefaultText = "Insira Seu Email";
+            this.TxbEmailEmpresa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxbEmailEmpresa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxbEmailEmpresa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxbEmailEmpresa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxbEmailEmpresa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxbEmailEmpresa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxbEmailEmpresa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxbEmailEmpresa.Location = new System.Drawing.Point(302, 164);
+            this.TxbEmailEmpresa.Name = "TxbEmailEmpresa";
+            this.TxbEmailEmpresa.PasswordChar = '\0';
+            this.TxbEmailEmpresa.PlaceholderText = "";
+            this.TxbEmailEmpresa.SelectedText = "";
+            this.TxbEmailEmpresa.Size = new System.Drawing.Size(189, 36);
+            this.TxbEmailEmpresa.TabIndex = 67;
             // 
             // label15
             // 
@@ -1421,25 +1421,26 @@
             this.BtnRegistrarEmpresa.Size = new System.Drawing.Size(177, 35);
             this.BtnRegistrarEmpresa.TabIndex = 65;
             this.BtnRegistrarEmpresa.Text = "Registrar";
+            this.BtnRegistrarEmpresa.Click += new System.EventHandler(this.BtnRegistrarEmpresa_Click);
             // 
-            // guna2TextBox6
+            // TxbCNPJEmpresa
             // 
-            this.guna2TextBox6.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox6.DefaultText = "CNPJ da Instituição";
-            this.guna2TextBox6.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox6.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox6.Location = new System.Drawing.Point(302, 90);
-            this.guna2TextBox6.Name = "guna2TextBox6";
-            this.guna2TextBox6.PasswordChar = '\0';
-            this.guna2TextBox6.PlaceholderText = "";
-            this.guna2TextBox6.SelectedText = "";
-            this.guna2TextBox6.Size = new System.Drawing.Size(189, 36);
-            this.guna2TextBox6.TabIndex = 64;
+            this.TxbCNPJEmpresa.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxbCNPJEmpresa.DefaultText = "CNPJ da Instituição";
+            this.TxbCNPJEmpresa.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxbCNPJEmpresa.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxbCNPJEmpresa.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxbCNPJEmpresa.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxbCNPJEmpresa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxbCNPJEmpresa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxbCNPJEmpresa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxbCNPJEmpresa.Location = new System.Drawing.Point(302, 90);
+            this.TxbCNPJEmpresa.Name = "TxbCNPJEmpresa";
+            this.TxbCNPJEmpresa.PasswordChar = '\0';
+            this.TxbCNPJEmpresa.PlaceholderText = "";
+            this.TxbCNPJEmpresa.SelectedText = "";
+            this.TxbCNPJEmpresa.Size = new System.Drawing.Size(189, 36);
+            this.TxbCNPJEmpresa.TabIndex = 64;
             // 
             // BtnEntrar
             // 
@@ -1519,7 +1520,7 @@
             // 
             // TbcProfile
             // 
-            this.TbcProfile.Controls.Add(this.lboItens);
+            this.TbcProfile.Controls.Add(this.lboCodigo);
             this.TbcProfile.Controls.Add(this.LabelTypeUser);
             this.TbcProfile.Controls.Add(this.LabelNameUser);
             this.TbcProfile.Controls.Add(this.PictureBoxProfile);
@@ -1530,6 +1531,14 @@
             this.TbcProfile.TabIndex = 8;
             this.TbcProfile.Text = "Perfil";
             this.TbcProfile.UseVisualStyleBackColor = true;
+            // 
+            // lboCodigo
+            // 
+            this.lboCodigo.FormattingEnabled = true;
+            this.lboCodigo.Location = new System.Drawing.Point(349, 79);
+            this.lboCodigo.Name = "lboCodigo";
+            this.lboCodigo.Size = new System.Drawing.Size(442, 212);
+            this.lboCodigo.TabIndex = 4;
             // 
             // LabelTypeUser
             // 
@@ -1731,15 +1740,6 @@
             this.ImageListProfile.TransparentColor = System.Drawing.Color.Transparent;
             this.ImageListProfile.Images.SetKeyName(0, "user4.png");
             // 
-            // lboItens
-            // 
-            this.lboItens.FormattingEnabled = true;
-            this.lboItens.Location = new System.Drawing.Point(349, 79);
-            this.lboItens.Name = "lboItens";
-            this.lboItens.Size = new System.Drawing.Size(442, 212);
-            this.lboItens.TabIndex = 4;
-            
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1809,8 +1809,8 @@
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2TextBox TxbEmailUser;
         private System.Windows.Forms.Label label11;
-        private Guna.UI2.WinForms.Guna2Button BtnRegistrar;
-        private Guna.UI2.WinForms.Guna2TextBox TxbCNPJ;
+        private Guna.UI2.WinForms.Guna2Button BtnRegistrarUser;
+        private Guna.UI2.WinForms.Guna2TextBox TxbNomeUser;
         private System.Windows.Forms.Label BtnCadastrarEmpresa;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
@@ -1818,14 +1818,14 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TabPage TbcRegistroEmpresa;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox TxbConfirmarSenhaEmpresa;
         private System.Windows.Forms.Label label13;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox4;
+        private Guna.UI2.WinForms.Guna2TextBox TxbSenhaEmpresa;
         private System.Windows.Forms.Label label14;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox5;
+        private Guna.UI2.WinForms.Guna2TextBox TxbEmailEmpresa;
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2Button BtnRegistrarEmpresa;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox6;
+        private Guna.UI2.WinForms.Guna2TextBox TxbCNPJEmpresa;
         private System.Windows.Forms.Label BtnEntrar;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
@@ -1869,7 +1869,7 @@
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label27;
-        private Guna.UI2.WinForms.Guna2ComboBox TxbTipoDoar;
+        private Guna.UI2.WinForms.Guna2ComboBox CBTipoDoar;
         private Guna.UI2.WinForms.Guna2TextBox TxbNomeDoar;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.Label label32;
@@ -1887,7 +1887,7 @@
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.PictureBox voltar1;
         private Guna.UI2.WinForms.Guna2DateTimePicker DataEntregaDoar;
-        private Guna.UI2.WinForms.Guna2ComboBox TxbLocalDoar;
+        private Guna.UI2.WinForms.Guna2ComboBox CBLocalDoar;
         private System.Windows.Forms.Label label29;
         private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
         private System.Windows.Forms.Panel pnlHome;
@@ -1910,7 +1910,7 @@
         private Guna.UI2.WinForms.Guna2Button BtnLogoff;
         private System.Windows.Forms.Label LabelErroSenha;
         private System.Windows.Forms.ImageList ImageListProfile;
-        private System.Windows.Forms.ListBox lboItens;
+        private System.Windows.Forms.ListBox lboCodigo;
     }
 }
 
