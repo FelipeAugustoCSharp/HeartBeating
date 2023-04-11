@@ -25,7 +25,41 @@ namespace HeartBeating
         SqlCommand comando = new SqlCommand();
         SqlDataReader dr;
 
-        private void carregarLista() //criacao de método pra abrir o banco de dados e mostrar o que ha na lista
+        private void carregarListaEmpresa() //criacao de método pra abrir o banco de dados e mostrar o que ha na lista
+        {
+            if(stateUser == true)
+            {
+                conn.Open(); // abra o banco de dados
+                comando.CommandText = "select * from RecebemosDoCliente"; //armazenando esse comando na variavel
+                dr = comando.ExecuteReader();        //executar
+
+                if (dr.HasRows) //has hows == tem linhas?
+                {
+                    while (dr.Read()) //enquanto estiver lendo os arquivos das linhas...
+                    {
+                        lboCodigo.Items.Add(dr[2].ToString()); // adicionar a primeira linha (codigo) como string dentro do list box       
+                    }
+                }
+            }
+            else
+            {
+                conn.Open(); // abra o banco de dados
+                comando.CommandText = "select * from Empresa"; //armazenando esse comando na variavel
+                dr = comando.ExecuteReader();        //executar
+
+                if (dr.HasRows) //has hows == tem linhas?
+                {
+                    while (dr.Read()) //enquanto estiver lendo os arquivos das linhas...
+                    {
+                        lboCodigo.Items.Add(dr[0].ToString()); // adicionar a primeira linha (codigo) como string dentro do list box       
+                    }
+                }
+            }
+           
+            conn.Close(); //fechar o banco de dados
+        }
+
+        /*private void carregarListaUsuarios() //criacao de método pra abrir o banco de dados e mostrar o que ha na lista
         {
 
             conn.Open(); // abra o banco de dados
@@ -36,13 +70,11 @@ namespace HeartBeating
             {
                 while (dr.Read()) //enquanto estiver lendo os arquivos das linhas...
                 {
-                    lboCodigo.Items.Add(dr[0].ToString()); // adicionar a primeira linha (codigo) como string dentro do list box                    
-                    lboNames.Items.Add(dr[1].ToString());
+                    lboCodigo.Items.Add(dr[0].ToString()); // adicionar a primeira linha (codigo) como string dentro do list box       
                 }
             }
             conn.Close(); //fechar o banco de dados
-        }
-
+        }*/
 
         private void MudasPagina(int n)
         {
@@ -109,6 +141,7 @@ namespace HeartBeating
         private void btnDonate_Click(object sender, EventArgs e)
         {
             MudasPagina(1);
+            
         }
         private void labelCadastro_Click(object sender, EventArgs e)
         {
@@ -273,8 +306,29 @@ namespace HeartBeating
             }
         }
 
+
+
+        bool stateUser;
+        //Func<bool, bool> typeUser = x => x;
+
+        
+        public FrmPrincipal()
+        {
+            InitializeComponent();
+            comando.Connection = conn;
+            rdbUser.Checked = true;
+            btnDonate.Enabled = false;
+            
+
+
+            MudasPagina(5);
+        }
         private void BtnEntrarLogin_Click(object sender, EventArgs e)       //LOGIN
         {
+            //if (rdbUser.Checked == null || rdbEmpresa.Checked == null) MessageBox.Show("Insira um tipo de entrada"); return;
+            if (rdbUser.Checked == true) { stateUser = true; }
+            else { stateUser = false; }
+
             try
             {
                 var config = new FirebaseAuthConfig
@@ -294,13 +348,17 @@ namespace HeartBeating
 
                 //MUDAR O HEADER LOGIN PARA PROFILE
 
+                lboCodigo.Items.Clear();
                 Thread.Sleep(1000);
+                MessageBox.Show(stateUser.ToString());
                 MudasPagina(8);
-                btnLogin.Text = "Profile";
-
+                btnLogin.Text = "Profile";   
                 LabelNameUser.Text = cliente.User.ToString();        //NOME DO PERFIL
                 LabelTypeUser.Text = cliente.User.ToString();        //TIPO DO PERFIL
                 PictureBoxProfile.Image = ImageListProfile.Images[0]; //IMAGEM DO PERFIL
+                btnDonate.Enabled = true;
+                
+                carregarListaEmpresa();
             }
             catch (Exception ex)
             {
@@ -341,22 +399,26 @@ namespace HeartBeating
             comando.ExecuteNonQuery();
             conn.Close();
         }
-        public FrmPrincipal()
-        {
-            InitializeComponent();
-            comando.Connection = conn;
-            carregarLista();
-            //EnviarDados();
-            MudasPagina(5);            
-        }
+
+
         private void btnEnviarDoacao_Click(object sender, EventArgs e)
         {
-            carregarLista();
-            conn.Open();
-            comando.CommandText = "insert into Recebemos(tipo, empresa_id, nome, endereco, dia) values ('" + CBTipoDoar.Text + "', '" + lboCodigo.Items[lboCodigo.Items.Count-1] + "','" + TxbNomeDoar.Text + "','" + CBLocalDoar.Text + "','" + DataEntregaDoar.Text + "')";
-            comando.ExecuteNonQuery();
-            conn.Close();
 
+
+            if (stateUser == true)
+            {
+                conn.Open();
+                comando.CommandText = "insert into RecebemosDoCliente(tipo, cliente_id, nome, endereco, dia) values ('" + CBTipoDoar.Text + "', '" + lboCodigo.Items[lboCodigo.Items.Count - 1] + "','" + TxbNomeDoar.Text + "','" + CBLocalDoar.Text + "','" + DataEntregaDoar.Text + "')";
+                comando.ExecuteNonQuery();
+                conn.Close();
+            }
+            else 
+            { 
+                conn.Open();
+                comando.CommandText = "insert into Recebemos(tipo, empresa_id , nome, endereco, dia) values ('" + CBTipoDoar.Text + "', '" + lboCodigo.Items[lboCodigo.Items.Count - 1] + "','" + TxbNomeDoar.Text + "','" + CBLocalDoar.Text + "','" + DataEntregaDoar.Text + "')";
+                comando.ExecuteNonQuery();
+                conn.Close();
+            }
 
             /*
              * Lembrar de deixar async para utilizar o método abaixo

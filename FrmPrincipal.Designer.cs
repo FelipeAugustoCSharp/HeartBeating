@@ -129,6 +129,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.voltar3 = new System.Windows.Forms.PictureBox();
             this.TbcProfile = new System.Windows.Forms.TabPage();
+            this.lboNames = new System.Windows.Forms.ListBox();
             this.lboCodigo = new System.Windows.Forms.ListBox();
             this.LabelTypeUser = new System.Windows.Forms.Label();
             this.LabelNameUser = new System.Windows.Forms.Label();
@@ -144,7 +145,8 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.ImageListProfile = new System.Windows.Forms.ImageList(this.components);
-            this.lboNames = new System.Windows.Forms.ListBox();
+            this.rdbUser = new System.Windows.Forms.RadioButton();
+            this.rdbEmpresa = new System.Windows.Forms.RadioButton();
             this.tbcPrincipal.SuspendLayout();
             this.TbcHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -896,6 +898,8 @@
             // 
             // TbcLogin
             // 
+            this.TbcLogin.Controls.Add(this.rdbEmpresa);
+            this.TbcLogin.Controls.Add(this.rdbUser);
             this.TbcLogin.Controls.Add(this.BtnEntrarLogin);
             this.TbcLogin.Controls.Add(this.TxbSenhaLogin);
             this.TbcLogin.Controls.Add(this.TxbEmailLogin);
@@ -940,7 +944,7 @@
             this.TxbSenhaLogin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxbSenhaLogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold);
             this.TxbSenhaLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxbSenhaLogin.Location = new System.Drawing.Point(381, 168);
+            this.TxbSenhaLogin.Location = new System.Drawing.Point(381, 163);
             this.TxbSenhaLogin.Name = "TxbSenhaLogin";
             this.TxbSenhaLogin.PasswordChar = '\0';
             this.TxbSenhaLogin.PlaceholderText = "";
@@ -959,7 +963,7 @@
             this.TxbEmailLogin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxbEmailLogin.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxbEmailLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxbEmailLogin.Location = new System.Drawing.Point(381, 88);
+            this.TxbEmailLogin.Location = new System.Drawing.Point(381, 83);
             this.TxbEmailLogin.Name = "TxbEmailLogin";
             this.TxbEmailLogin.PasswordChar = '\0';
             this.TxbEmailLogin.PlaceholderText = "";
@@ -995,7 +999,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label3.Location = new System.Drawing.Point(376, 140);
+            this.label3.Location = new System.Drawing.Point(376, 135);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 25);
             this.label3.TabIndex = 46;
@@ -1006,7 +1010,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.label2.Location = new System.Drawing.Point(376, 60);
+            this.label2.Location = new System.Drawing.Point(376, 55);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 25);
             this.label2.TabIndex = 45;
@@ -1534,6 +1538,15 @@
             this.TbcProfile.Text = "Perfil";
             this.TbcProfile.UseVisualStyleBackColor = true;
             // 
+            // lboNames
+            // 
+            this.lboNames.FormattingEnabled = true;
+            this.lboNames.Location = new System.Drawing.Point(328, 79);
+            this.lboNames.Name = "lboNames";
+            this.lboNames.Size = new System.Drawing.Size(212, 212);
+            this.lboNames.TabIndex = 5;
+            this.lboNames.Visible = false;
+            // 
             // lboCodigo
             // 
             this.lboCodigo.FormattingEnabled = true;
@@ -1541,7 +1554,7 @@
             this.lboCodigo.Name = "lboCodigo";
             this.lboCodigo.Size = new System.Drawing.Size(212, 212);
             this.lboCodigo.TabIndex = 4;
-            
+            this.lboCodigo.Visible = false;
             // 
             // LabelTypeUser
             // 
@@ -1602,8 +1615,8 @@
             this.pnlHome.Controls.Add(this.label37);
             this.pnlHome.Controls.Add(this.pictureBox7);
             this.pnlHome.Controls.Add(this.pnlContainer);
-            this.pnlHome.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlHome.Location = new System.Drawing.Point(0, 396);
+            this.pnlHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHome.Location = new System.Drawing.Point(0, 0);
             this.pnlHome.Name = "pnlHome";
             this.pnlHome.Size = new System.Drawing.Size(800, 54);
             this.pnlHome.TabIndex = 27;
@@ -1743,13 +1756,27 @@
             this.ImageListProfile.TransparentColor = System.Drawing.Color.Transparent;
             this.ImageListProfile.Images.SetKeyName(0, "user4.png");
             // 
-            // lboNames
+            // rdbUser
             // 
-            this.lboNames.FormattingEnabled = true;
-            this.lboNames.Location = new System.Drawing.Point(328, 79);
-            this.lboNames.Name = "lboNames";
-            this.lboNames.Size = new System.Drawing.Size(212, 212);
-            this.lboNames.TabIndex = 5;
+            this.rdbUser.AutoSize = true;
+            this.rdbUser.Location = new System.Drawing.Point(381, 205);
+            this.rdbUser.Name = "rdbUser";
+            this.rdbUser.Size = new System.Drawing.Size(121, 17);
+            this.rdbUser.TabIndex = 52;
+            this.rdbUser.TabStop = true;
+            this.rdbUser.Text = "Entrar como Usuário";
+            this.rdbUser.UseVisualStyleBackColor = true;
+            // 
+            // rdbEmpresa
+            // 
+            this.rdbEmpresa.AutoSize = true;
+            this.rdbEmpresa.Location = new System.Drawing.Point(520, 205);
+            this.rdbEmpresa.Name = "rdbEmpresa";
+            this.rdbEmpresa.Size = new System.Drawing.Size(126, 17);
+            this.rdbEmpresa.TabIndex = 53;
+            this.rdbEmpresa.TabStop = true;
+            this.rdbEmpresa.Text = "Entrar como Empresa";
+            this.rdbEmpresa.UseVisualStyleBackColor = true;
             // 
             // FrmPrincipal
             // 
@@ -1923,6 +1950,8 @@
         private System.Windows.Forms.ImageList ImageListProfile;
         private System.Windows.Forms.ListBox lboCodigo;
         private System.Windows.Forms.ListBox lboNames;
+        private System.Windows.Forms.RadioButton rdbEmpresa;
+        private System.Windows.Forms.RadioButton rdbUser;
     }
 }
 
