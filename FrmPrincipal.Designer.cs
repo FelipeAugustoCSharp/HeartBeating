@@ -147,6 +147,8 @@
             this.ImageListProfile = new System.Windows.Forms.ImageList(this.components);
             this.rdbUser = new System.Windows.Forms.RadioButton();
             this.rdbEmpresa = new System.Windows.Forms.RadioButton();
+            this.TbcLista = new System.Windows.Forms.TabPage();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.tbcPrincipal.SuspendLayout();
             this.TbcHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -178,6 +180,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxProfile)).BeginInit();
             this.pnlHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.TbcLista.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcPrincipal
@@ -191,6 +195,7 @@
             this.tbcPrincipal.Controls.Add(this.TbcRegister);
             this.tbcPrincipal.Controls.Add(this.TbcRegistroEmpresa);
             this.tbcPrincipal.Controls.Add(this.TbcProfile);
+            this.tbcPrincipal.Controls.Add(this.TbcLista);
             this.tbcPrincipal.Location = new System.Drawing.Point(-8, 23);
             this.tbcPrincipal.Name = "tbcPrincipal";
             this.tbcPrincipal.SelectedIndex = 0;
@@ -1778,6 +1783,27 @@
             this.rdbEmpresa.Text = "Entrar como Empresa";
             this.rdbEmpresa.UseVisualStyleBackColor = true;
             // 
+            // TbcLista
+            // 
+            this.TbcLista.Controls.Add(this.pictureBox8);
+            this.TbcLista.Location = new System.Drawing.Point(4, 22);
+            this.TbcLista.Name = "TbcLista";
+            this.TbcLista.Size = new System.Drawing.Size(812, 409);
+            this.TbcLista.TabIndex = 9;
+            this.TbcLista.Text = "Itens Doados";
+            this.TbcLista.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(343, 66);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(182, 154);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 60;
+            this.pictureBox8.TabStop = false;
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1829,6 +1855,8 @@
             this.pnlHome.ResumeLayout(false);
             this.pnlHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.TbcLista.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1952,6 +1980,8 @@
         private System.Windows.Forms.ListBox lboNames;
         private System.Windows.Forms.RadioButton rdbEmpresa;
         private System.Windows.Forms.RadioButton rdbUser;
+        private System.Windows.Forms.TabPage TbcLista;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }
 

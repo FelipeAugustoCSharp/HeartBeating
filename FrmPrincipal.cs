@@ -27,7 +27,8 @@ namespace HeartBeating
 
         private void carregarListaEmpresa() //criacao de método pra abrir o banco de dados e mostrar o que ha na lista
         {
-            if(stateUser == true)
+            //statusUser
+            if(statusUsuario(rdbUser.Checked) == true)
             {
                 conn.Open(); // abra o banco de dados
                 comando.CommandText = "select * from RecebemosDoCliente"; //armazenando esse comando na variavel
@@ -120,7 +121,12 @@ namespace HeartBeating
 
         private void btnReceber_Click(object sender, EventArgs e)
         {
-            MudasPagina(3);
+            if (btnReceber.Text == "Receber")            
+                MudasPagina(3);            
+            else                 
+                MudasPagina(9);
+            
+
         }
 
         private void voltar0_Click(object sender, EventArgs e)
@@ -174,7 +180,7 @@ namespace HeartBeating
 
 
             conn.Open();
-            comando.CommandText = "insert into Doamos(tipo, genero, endereco, dia) values ('" + CBTipoDoamos.Text + "', '" + CBGenero.Text + "','" + CBLocalDoamos.Text + "','" + DateTimeDoamos.Text + "')";
+            comando.CommandText = "insert into Doamos(cliente_id, tipo, genero, endereco, dia) values ('" + lboCodigo.Items[lboCodigo.Items.Count - 1] + "','" + CBTipoDoamos.Text + "', '" + CBGenero.Text + "','" + CBLocalDoamos.Text + "','" + DateTimeDoamos.Text + "')";
             comando.ExecuteNonQuery();
             conn.Close();
 
@@ -312,29 +318,32 @@ namespace HeartBeating
                 }
             }
         }
-
-
-
-        bool stateUser;
-        //Func<bool, bool> typeUser = x => x;
-
-        
         public FrmPrincipal()
         {
             InitializeComponent();
             comando.Connection = conn;
             rdbUser.Checked = true;
-            btnDonate.Enabled = false;
-            
-
-
+            btnDonate.Enabled = false;  
             MudasPagina(5);
         }
+
+
+        Func<bool, bool> statusUsuario = UserOrEnterprise => UserOrEnterprise;
+        /*public bool statusUser()
+        {
+            bool status = rdbUser.Checked ? true : false;
+            MessageBox.Show(status.ToString());
+            return status;
+            
+        }*/
+       // bool stateUser;
         private void BtnEntrarLogin_Click(object sender, EventArgs e)       //LOGIN
         {
             //if (rdbUser.Checked == null || rdbEmpresa.Checked == null) MessageBox.Show("Insira um tipo de entrada"); return;
-            if (rdbUser.Checked == true) { stateUser = true; }
-            else { stateUser = false; }
+            /*if (rdbUser.Checked == true) { stateUser = true; }
+            else { stateUser = false; }*/
+            statusUsuario(rdbUser.Checked);
+            MessageBox.Show(statusUsuario(rdbUser.Checked).ToString());
 
             try
             {
@@ -357,14 +366,18 @@ namespace HeartBeating
 
                 lboCodigo.Items.Clear();
                 Thread.Sleep(1000);
-                MessageBox.Show(stateUser.ToString());
+                //MessageBox.Show(stateUser.ToString());
                 MudasPagina(8);
                 btnLogin.Text = "Profile";   
                 LabelNameUser.Text = cliente.User.ToString();        //NOME DO PERFIL
                 LabelTypeUser.Text = cliente.User.ToString();        //TIPO DO PERFIL
                 PictureBoxProfile.Image = ImageListProfile.Images[0]; //IMAGEM DO PERFIL
-                btnDonate.Enabled = true;
-                
+
+                //statusUser
+                if (statusUsuario(rdbUser.Checked) == false)
+                    btnReceber.Text = "Itens Doados";
+                else btnReceber.Text = "Receber";
+                btnDonate.Enabled = true;                
                 carregarListaEmpresa();
             }
             catch (Exception ex)
@@ -411,8 +424,8 @@ namespace HeartBeating
         private void btnEnviarDoacao_Click(object sender, EventArgs e)
         {
 
-
-            if (stateUser == true)
+            //statusUser
+            if (statusUsuario(rdbUser.Checked) == true)
             {
                 conn.Open();
                 comando.CommandText = "insert into RecebemosDoCliente(tipo, cliente_id, nome, endereco, dia) values ('" + CBTipoDoar.Text + "', '" + lboCodigo.Items[lboCodigo.Items.Count - 1] + "','" + TxbNomeDoar.Text + "','" + CBLocalDoar.Text + "','" + DataEntregaDoar.Text + "')";
