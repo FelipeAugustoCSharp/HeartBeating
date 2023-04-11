@@ -171,6 +171,13 @@ namespace HeartBeating
         {
             PictureCircle.Visible = true;
             PictureCircle.Visible = false;
+
+
+            conn.Open();
+            comando.CommandText = "insert into Doamos(tipo, genero, endereco, dia) values ('" + CBTipoDoamos.Text + "', '" + CBGenero.Text + "','" + CBLocalDoamos.Text + "','" + DateTimeDoamos.Text + "')";
+            comando.ExecuteNonQuery();
+            conn.Close();
+
         }
         /* private void txbDATE_Validating(object sender, CancelEventArgs e)
          {

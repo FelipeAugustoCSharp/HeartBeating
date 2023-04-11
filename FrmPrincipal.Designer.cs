@@ -65,16 +65,16 @@
             this.txtCircle2 = new System.Windows.Forms.Label();
             this.txtCircle1 = new System.Windows.Forms.Label();
             this.PictureCircle = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2ComboBox4 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.DateTimeDoamos = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.CBLocalDoamos = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.guna2ComboBox3 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CBGenero = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label39 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.btnConfirmar = new Guna.UI2.WinForms.Guna2Button();
             this.label35 = new System.Windows.Forms.Label();
-            this.guna2ComboBox2 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CBTipoDoamos = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label38 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -603,16 +603,16 @@
             this.TbcCadastroReceber.Controls.Add(this.txtCircle2);
             this.TbcCadastroReceber.Controls.Add(this.txtCircle1);
             this.TbcCadastroReceber.Controls.Add(this.PictureCircle);
-            this.TbcCadastroReceber.Controls.Add(this.guna2DateTimePicker1);
-            this.TbcCadastroReceber.Controls.Add(this.guna2ComboBox4);
+            this.TbcCadastroReceber.Controls.Add(this.DateTimeDoamos);
+            this.TbcCadastroReceber.Controls.Add(this.CBLocalDoamos);
             this.TbcCadastroReceber.Controls.Add(this.label36);
-            this.TbcCadastroReceber.Controls.Add(this.guna2ComboBox3);
+            this.TbcCadastroReceber.Controls.Add(this.CBGenero);
             this.TbcCadastroReceber.Controls.Add(this.label39);
             this.TbcCadastroReceber.Controls.Add(this.label33);
             this.TbcCadastroReceber.Controls.Add(this.label34);
             this.TbcCadastroReceber.Controls.Add(this.btnConfirmar);
             this.TbcCadastroReceber.Controls.Add(this.label35);
-            this.TbcCadastroReceber.Controls.Add(this.guna2ComboBox2);
+            this.TbcCadastroReceber.Controls.Add(this.CBTipoDoamos);
             this.TbcCadastroReceber.Controls.Add(this.label38);
             this.TbcCadastroReceber.Controls.Add(this.label25);
             this.TbcCadastroReceber.Controls.Add(this.label24);
@@ -633,7 +633,7 @@
             this.txtCircle2.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.txtCircle2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCircle2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtCircle2.Location = new System.Drawing.Point(728, 235);
+            this.txtCircle2.Location = new System.Drawing.Point(399, 187);
             this.txtCircle2.Name = "txtCircle2";
             this.txtCircle2.Size = new System.Drawing.Size(244, 23);
             this.txtCircle2.TabIndex = 110;
@@ -646,7 +646,7 @@
             this.txtCircle1.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.txtCircle1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCircle1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtCircle1.Location = new System.Drawing.Point(730, 160);
+            this.txtCircle1.Location = new System.Drawing.Point(385, 136);
             this.txtCircle1.Name = "txtCircle1";
             this.txtCircle1.Size = new System.Drawing.Size(260, 23);
             this.txtCircle1.TabIndex = 109;
@@ -657,7 +657,7 @@
             // 
             this.PictureCircle.FillColor = System.Drawing.Color.MediumSeaGreen;
             this.PictureCircle.ImageRotate = 0F;
-            this.PictureCircle.Location = new System.Drawing.Point(709, 78);
+            this.PictureCircle.Location = new System.Drawing.Point(380, 30);
             this.PictureCircle.Name = "PictureCircle";
             this.PictureCircle.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.PictureCircle.Size = new System.Drawing.Size(281, 281);
@@ -665,40 +665,40 @@
             this.PictureCircle.TabStop = false;
             this.PictureCircle.Visible = false;
             // 
-            // guna2DateTimePicker1
+            // DateTimeDoamos
             // 
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.White;
-            this.guna2DateTimePicker1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.guna2DateTimePicker1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(548, 203);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(126, 36);
-            this.guna2DateTimePicker1.TabIndex = 106;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2023, 4, 5, 0, 0, 0, 0);
+            this.DateTimeDoamos.Checked = true;
+            this.DateTimeDoamos.FillColor = System.Drawing.Color.White;
+            this.DateTimeDoamos.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.DateTimeDoamos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateTimeDoamos.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateTimeDoamos.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.DateTimeDoamos.Location = new System.Drawing.Point(548, 203);
+            this.DateTimeDoamos.MaxDate = new System.DateTime(2030, 12, 31, 0, 0, 0, 0);
+            this.DateTimeDoamos.MinDate = new System.DateTime(2023, 1, 1, 0, 0, 0, 0);
+            this.DateTimeDoamos.Name = "DateTimeDoamos";
+            this.DateTimeDoamos.Size = new System.Drawing.Size(126, 36);
+            this.DateTimeDoamos.TabIndex = 106;
+            this.DateTimeDoamos.Value = new System.DateTime(2023, 4, 5, 0, 0, 0, 0);
             // 
-            // guna2ComboBox4
+            // CBLocalDoamos
             // 
-            this.guna2ComboBox4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox4.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox4.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox4.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox4.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox4.ItemHeight = 30;
-            this.guna2ComboBox4.Items.AddRange(new object[] {
+            this.CBLocalDoamos.BackColor = System.Drawing.Color.Transparent;
+            this.CBLocalDoamos.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CBLocalDoamos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBLocalDoamos.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CBLocalDoamos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CBLocalDoamos.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CBLocalDoamos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CBLocalDoamos.ItemHeight = 30;
+            this.CBLocalDoamos.Items.AddRange(new object[] {
             "Osasco - Rua Batiston, Numero 325 - CEP: 06357412",
             "Carapicuíba - Rua Antoneli, Numero 12 - CEP: 6554411",
             "Jundiaí - Rua Alfredo, Numero 272 - CEP: 8658416"});
-            this.guna2ComboBox4.Location = new System.Drawing.Point(295, 203);
-            this.guna2ComboBox4.Name = "guna2ComboBox4";
-            this.guna2ComboBox4.Size = new System.Drawing.Size(198, 36);
-            this.guna2ComboBox4.TabIndex = 105;
+            this.CBLocalDoamos.Location = new System.Drawing.Point(295, 203);
+            this.CBLocalDoamos.Name = "CBLocalDoamos";
+            this.CBLocalDoamos.Size = new System.Drawing.Size(198, 36);
+            this.CBLocalDoamos.TabIndex = 105;
             // 
             // label36
             // 
@@ -710,25 +710,25 @@
             this.label36.TabIndex = 104;
             this.label36.Text = "Local de Recebimento";
             // 
-            // guna2ComboBox3
+            // CBGenero
             // 
-            this.guna2ComboBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox3.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox3.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox3.ItemHeight = 30;
-            this.guna2ComboBox3.Items.AddRange(new object[] {
+            this.CBGenero.BackColor = System.Drawing.Color.Transparent;
+            this.CBGenero.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CBGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBGenero.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CBGenero.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CBGenero.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CBGenero.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CBGenero.ItemHeight = 30;
+            this.CBGenero.Items.AddRange(new object[] {
             "Masculino",
             "Feminino",
             "Outros",
             "Prefiro Não Dizer"});
-            this.guna2ComboBox3.Location = new System.Drawing.Point(528, 104);
-            this.guna2ComboBox3.Name = "guna2ComboBox3";
-            this.guna2ComboBox3.Size = new System.Drawing.Size(198, 36);
-            this.guna2ComboBox3.TabIndex = 103;
+            this.CBGenero.Location = new System.Drawing.Point(528, 104);
+            this.CBGenero.Name = "CBGenero";
+            this.CBGenero.Size = new System.Drawing.Size(198, 36);
+            this.CBGenero.TabIndex = 103;
             // 
             // label39
             // 
@@ -791,25 +791,25 @@
             this.label35.TabIndex = 97;
             this.label35.Text = "Dia";
             // 
-            // guna2ComboBox2
+            // CBTipoDoamos
             // 
-            this.guna2ComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox2.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox2.ItemHeight = 30;
-            this.guna2ComboBox2.Items.AddRange(new object[] {
+            this.CBTipoDoamos.BackColor = System.Drawing.Color.Transparent;
+            this.CBTipoDoamos.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CBTipoDoamos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBTipoDoamos.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CBTipoDoamos.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.CBTipoDoamos.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CBTipoDoamos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CBTipoDoamos.ItemHeight = 30;
+            this.CBTipoDoamos.Items.AddRange(new object[] {
             "Alimentos",
             "Brinquedos",
             "Produtos De Limpeza",
             "Higiene Pessoal"});
-            this.guna2ComboBox2.Location = new System.Drawing.Point(295, 104);
-            this.guna2ComboBox2.Name = "guna2ComboBox2";
-            this.guna2ComboBox2.Size = new System.Drawing.Size(198, 36);
-            this.guna2ComboBox2.TabIndex = 93;
+            this.CBTipoDoamos.Location = new System.Drawing.Point(295, 104);
+            this.CBTipoDoamos.Name = "CBTipoDoamos";
+            this.CBTipoDoamos.Size = new System.Drawing.Size(198, 36);
+            this.CBTipoDoamos.TabIndex = 93;
             // 
             // label38
             // 
@@ -1615,8 +1615,8 @@
             this.pnlHome.Controls.Add(this.label37);
             this.pnlHome.Controls.Add(this.pictureBox7);
             this.pnlHome.Controls.Add(this.pnlContainer);
-            this.pnlHome.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlHome.Location = new System.Drawing.Point(0, 0);
+            this.pnlHome.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlHome.Location = new System.Drawing.Point(0, 396);
             this.pnlHome.Name = "pnlHome";
             this.pnlHome.Size = new System.Drawing.Size(800, 54);
             this.pnlHome.TabIndex = 27;
@@ -1913,21 +1913,21 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
         private Guna.UI2.WinForms.Guna2Button btnEnviarDoacao;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox4;
+        private Guna.UI2.WinForms.Guna2ComboBox CBLocalDoamos;
         private System.Windows.Forms.Label label36;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox3;
+        private Guna.UI2.WinForms.Guna2ComboBox CBGenero;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
         private Guna.UI2.WinForms.Guna2Button btnConfirmar;
         private System.Windows.Forms.Label label35;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox2;
+        private Guna.UI2.WinForms.Guna2ComboBox CBTipoDoamos;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.PictureBox voltar1;
         private Guna.UI2.WinForms.Guna2DateTimePicker DataEntregaDoar;
         private Guna.UI2.WinForms.Guna2ComboBox CBLocalDoar;
         private System.Windows.Forms.Label label29;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
+        private Guna.UI2.WinForms.Guna2DateTimePicker DateTimeDoamos;
         private System.Windows.Forms.Panel pnlHome;
         private Guna.UI2.WinForms.Guna2Button btnHome;
         private Guna.UI2.WinForms.Guna2Button btnDonate;
