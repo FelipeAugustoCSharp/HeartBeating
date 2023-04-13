@@ -84,6 +84,8 @@
             this.voltar1 = new System.Windows.Forms.PictureBox();
             this.TbcSobre = new System.Windows.Forms.TabPage();
             this.TbcLogin = new System.Windows.Forms.TabPage();
+            this.rdbEmpresa = new System.Windows.Forms.RadioButton();
+            this.rdbUser = new System.Windows.Forms.RadioButton();
             this.BtnEntrarLogin = new Guna.UI2.WinForms.Guna2Button();
             this.TxbSenhaLogin = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxbEmailLogin = new Guna.UI2.WinForms.Guna2TextBox();
@@ -135,6 +137,8 @@
             this.LabelNameUser = new System.Windows.Forms.Label();
             this.PictureBoxProfile = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.BtnLogoff = new Guna.UI2.WinForms.Guna2Button();
+            this.TbcLista = new System.Windows.Forms.TabPage();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pnlHome = new System.Windows.Forms.Panel();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.btnDonate = new Guna.UI2.WinForms.Guna2Button();
@@ -145,10 +149,6 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pnlContainer = new System.Windows.Forms.Panel();
             this.ImageListProfile = new System.Windows.Forms.ImageList(this.components);
-            this.rdbUser = new System.Windows.Forms.RadioButton();
-            this.rdbEmpresa = new System.Windows.Forms.RadioButton();
-            this.TbcLista = new System.Windows.Forms.TabPage();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.tbcPrincipal.SuspendLayout();
             this.TbcHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -178,10 +178,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.voltar3)).BeginInit();
             this.TbcProfile.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxProfile)).BeginInit();
-            this.pnlHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.TbcLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.pnlHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
             // tbcPrincipal
@@ -922,6 +922,28 @@
             this.TbcLogin.Text = "TbcLogin";
             this.TbcLogin.UseVisualStyleBackColor = true;
             // 
+            // rdbEmpresa
+            // 
+            this.rdbEmpresa.AutoSize = true;
+            this.rdbEmpresa.Location = new System.Drawing.Point(520, 205);
+            this.rdbEmpresa.Name = "rdbEmpresa";
+            this.rdbEmpresa.Size = new System.Drawing.Size(126, 17);
+            this.rdbEmpresa.TabIndex = 53;
+            this.rdbEmpresa.TabStop = true;
+            this.rdbEmpresa.Text = "Entrar como Empresa";
+            this.rdbEmpresa.UseVisualStyleBackColor = true;
+            // 
+            // rdbUser
+            // 
+            this.rdbUser.AutoSize = true;
+            this.rdbUser.Location = new System.Drawing.Point(381, 205);
+            this.rdbUser.Name = "rdbUser";
+            this.rdbUser.Size = new System.Drawing.Size(121, 17);
+            this.rdbUser.TabIndex = 52;
+            this.rdbUser.TabStop = true;
+            this.rdbUser.Text = "Entrar como Usuário";
+            this.rdbUser.UseVisualStyleBackColor = true;
+            // 
             // BtnEntrarLogin
             // 
             this.BtnEntrarLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -1609,6 +1631,27 @@
             this.BtnLogoff.Text = "Desconectar";
             this.BtnLogoff.Click += new System.EventHandler(this.BtnLogoff_Click);
             // 
+            // TbcLista
+            // 
+            this.TbcLista.Controls.Add(this.pictureBox8);
+            this.TbcLista.Location = new System.Drawing.Point(4, 22);
+            this.TbcLista.Name = "TbcLista";
+            this.TbcLista.Size = new System.Drawing.Size(812, 409);
+            this.TbcLista.TabIndex = 9;
+            this.TbcLista.Text = "Itens Doados";
+            this.TbcLista.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(343, 66);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(182, 154);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 60;
+            this.pictureBox8.TabStop = false;
+            // 
             // pnlHome
             // 
             this.pnlHome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
@@ -1761,49 +1804,6 @@
             this.ImageListProfile.TransparentColor = System.Drawing.Color.Transparent;
             this.ImageListProfile.Images.SetKeyName(0, "user4.png");
             // 
-            // rdbUser
-            // 
-            this.rdbUser.AutoSize = true;
-            this.rdbUser.Location = new System.Drawing.Point(381, 205);
-            this.rdbUser.Name = "rdbUser";
-            this.rdbUser.Size = new System.Drawing.Size(121, 17);
-            this.rdbUser.TabIndex = 52;
-            this.rdbUser.TabStop = true;
-            this.rdbUser.Text = "Entrar como Usuário";
-            this.rdbUser.UseVisualStyleBackColor = true;
-            // 
-            // rdbEmpresa
-            // 
-            this.rdbEmpresa.AutoSize = true;
-            this.rdbEmpresa.Location = new System.Drawing.Point(520, 205);
-            this.rdbEmpresa.Name = "rdbEmpresa";
-            this.rdbEmpresa.Size = new System.Drawing.Size(126, 17);
-            this.rdbEmpresa.TabIndex = 53;
-            this.rdbEmpresa.TabStop = true;
-            this.rdbEmpresa.Text = "Entrar como Empresa";
-            this.rdbEmpresa.UseVisualStyleBackColor = true;
-            // 
-            // TbcLista
-            // 
-            this.TbcLista.Controls.Add(this.pictureBox8);
-            this.TbcLista.Location = new System.Drawing.Point(4, 22);
-            this.TbcLista.Name = "TbcLista";
-            this.TbcLista.Size = new System.Drawing.Size(812, 409);
-            this.TbcLista.TabIndex = 9;
-            this.TbcLista.Text = "Itens Doados";
-            this.TbcLista.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.DeepSkyBlue;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(343, 66);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(182, 154);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 60;
-            this.pictureBox8.TabStop = false;
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1852,11 +1852,11 @@
             this.TbcProfile.ResumeLayout(false);
             this.TbcProfile.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBoxProfile)).EndInit();
+            this.TbcLista.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.pnlHome.ResumeLayout(false);
             this.pnlHome.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            this.TbcLista.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
 
         }

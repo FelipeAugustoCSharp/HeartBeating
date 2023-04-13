@@ -343,7 +343,7 @@ namespace HeartBeating
             /*if (rdbUser.Checked == true) { stateUser = true; }
             else { stateUser = false; }*/
             statusUsuario(rdbUser.Checked);
-            MessageBox.Show(statusUsuario(rdbUser.Checked).ToString());
+            //MessageBox.Show(statusUsuario(rdbUser.Checked).ToString());
 
             try
             {
