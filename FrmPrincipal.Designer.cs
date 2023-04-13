@@ -1663,8 +1663,8 @@
             this.pnlHome.Controls.Add(this.label37);
             this.pnlHome.Controls.Add(this.pictureBox7);
             this.pnlHome.Controls.Add(this.pnlContainer);
-            this.pnlHome.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlHome.Location = new System.Drawing.Point(0, 396);
+            this.pnlHome.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHome.Location = new System.Drawing.Point(0, 0);
             this.pnlHome.Name = "pnlHome";
             this.pnlHome.Size = new System.Drawing.Size(800, 54);
             this.pnlHome.TabIndex = 27;
